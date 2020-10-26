@@ -6,7 +6,7 @@ import ProductScreen from './screens/ProductScreen'
 import { Container } from 'react-bootstrap'
 import './bootstrap.min.css'
 import HomeScreen from './screens/HomeScreen'
-
+import cartScreen from './screens/cartScreen'
 function App() {
   return (
     <Router>
@@ -15,6 +15,7 @@ function App() {
         <Container>
           <Route path='/' component={HomeScreen} exact />
           <Route path='/products/:id' component={ProductScreen} />
+          <Route path='/cart/:id?' component={cartScreen} />
         </Container>
       </main>
       <Footer />
