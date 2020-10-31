@@ -8,6 +8,10 @@ import './bootstrap.min.css'
 import HomeScreen from './screens/HomeScreen'
 import cartScreen from './screens/cartScreen'
 import loginScreen from './screens/LoginScreen'
+import RegisterScreen from './screens/RegisterScreen'
+import ProfileScreen from './screens/ProfileScreen'
+
+
 function App() {
   return (
     <Router>
@@ -16,6 +20,8 @@ function App() {
         <Container>
           <Route path='/' component={HomeScreen} exact />
           <Route path='/login' component={loginScreen} />
+          <Route path='/profile' component={ProfileScreen} />
+          <Route path='/register' component={RegisterScreen} />
           <Route path='/products/:id' component={ProductScreen} />
           <Route path='/cart/:id?' component={cartScreen} />
         </Container>
