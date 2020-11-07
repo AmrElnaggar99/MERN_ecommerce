@@ -2,6 +2,7 @@
     "name": "mern_shop",
     "version": "1.0.0",
     "type": "module",
+    "secture": false,
     "description": "MERN Shop app",
     "main": "server.js",
     "scripts": {
