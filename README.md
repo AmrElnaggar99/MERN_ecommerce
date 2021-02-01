@@ -5,5 +5,5 @@
 1. npm install
 2. npm run dev
 
-TODO: Implement better UI
+TODO: Implement better UI <br>
 TODO: Documentation
