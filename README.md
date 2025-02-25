@@ -1,48 +1,113 @@
-# MERN_ecommerce
-* You have to be using node < 17; I tested this with node 14.19.3
-* You need to make an .env file in `./` with the following content:
+# MERN E-Commerce
+
+This is a full-stack e-commerce web application built using the MERN (MongoDB, Express, React, Node.js) stack. It provides user authentication, product management, a shopping cart, and order processing with PayPal integration.
+
+## Demo
+[Live Deployment](https://mern-ecommerce-yuvr.onrender.com/)
+> ⚠️ **Warning:** The first time you open this demo it can take up to 50 seconds of loading time, this is because it is deployed on the free tier version of Render which spins down the server with inactivity to save resources.
+
+## Features
+- User authentication (Login/Register)
+- Admin dashboard for managing products, users, and orders
+- Shopping cart with order tracking
+- PayPal integration for secure payments
+- Image upload functionality
+- Responsive design
+
+## Tech Stack
+- **Frontend:** React, Redux, Bootstrap
+- **Backend:** Node.js, Express.js, MongoDB
+- **Authentication:** JSON Web Tokens (JWT)
+- **Payment Processing:** PayPal API
+- **Deployment:** Render (backend and Frontend), MongoDB Atlas (database)
+
+## Installation
+
+### Clone the Repository
+```sh
+git clone https://github.com/AmrElnaggar99/MERN_ecommerce.git
+cd MERN_ecommerce
 ```
+
+### Install Dependencies
+#### Backend and Frontend
+```sh
+npm install && npm install --prefix frontend
+```
+
+## Environment Variables Setup
+You need to create a `.env` file in the `/` directory and define the following variables:
+```ini
 NODE_ENV=development
-MONGO_URI=<MONGODB_URI>
-// PORT=<PORT>    use this if you don't want the server to run on 5000 but if you change it you need to also change it in proxy in frontend/package.json
-JWT_SECRET=7245c404fc32dec19586b68c2348c39807035015f7f5366bf98e60fe16601b8c    // or any random string
-PAYPAL_CLIENT_ID=<YOUR_PAYPAL_CLIENT_ID>
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+PAYPAL_CLIENT_ID=your_paypal_client_id
 ```
-## How to run it on local server
-0. cd MERN_ecommerce
-1. npm install
-6. node backend/seeder.js
-2. cd frontend
-3. npm install
-7. cd ../
-8. npm run dev
 
-TODO: Implement better UI <br>
-TODO: Documentation
-
-* MERN
-* Bootstrap
-* JWT
-* PayPal
-
-You can log in with these users:
-
+## Running the Application
+### Development Mode
+#### Backend
+```sh
+cd backend
+npm run dev
 ```
-const users = [{
-        name: 'AdminUser',
-        email: 'admin@mernshop.com',
-        password: bcrypt.hashSync('123456', 10),
-        isAdmin: true
-    },
-    {
-        name: 'John Due',
-        email: 'john@mernshop.com',
-        password: bcrypt.hashSync('123456', 10),
-    },
-    {
-        name: 'Jane Doe',
-        email: 'jane@mernshop.com',
-        password: bcrypt.hashSync('123456', 10),
-    }
+
+#### Frontend
+Ensure the `proxy` in `frontend/package.json` is set correctly to match the backend port:
+```json
+"proxy": "http://localhost:5000"
+```
+Then start the frontend:
+```sh
+cd frontend
+npm start
+```
+
+### Production Mode
+1. Build the frontend:
+   ```sh
+   cd frontend
+   npm run build
+   ```
+2. Start the backend (serving frontend as well):
+   ```sh
+   cd backend
+   npm start
+   ```
+
+## Deployment
+### Deployment on Render
+1. Push the code to GitHub
+2. Create a new web service on [Render](https://render.com/)
+3. Set the environment variables in Render's dashboard
+4. Set the root folder to `/` and the build command to `npm run build`.
+4. Deploy
+
+## Default Users
+You can log in with these test users:
+
+```json
+[
+  {
+    "name": "John Due",
+    "email": "john@mernshop.com",
+    "password": "123456"
+  },
+  {
+    "name": "Jane Doe",
+    "email": "jane@mernshop.com",
+    "password": "123456"
+  }
 ]
 ```
+And you can use this admin user to view admin privileges, but please don't delete products that are not your own.
+```json
+{
+    "email": "admin@mernsho.com",
+    "password": "123456"
+}
+
+```
+## License
+This project is open-source and available under the MIT License.
