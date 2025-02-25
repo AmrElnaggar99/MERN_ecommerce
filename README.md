@@ -22,7 +22,7 @@ This is a full-stack e-commerce web application built using the MERN (MongoDB, E
 - **Deployment:** Render (backend and Frontend), MongoDB Atlas (database)
 
 ## Installation
-
+* You need to have node < 16.x to run this project. It was built on node `14.19.3`.
 ### Clone the Repository
 ```sh
 git clone https://github.com/AmrElnaggar99/MERN_ecommerce.git
