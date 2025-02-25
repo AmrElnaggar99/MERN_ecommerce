@@ -45,6 +45,19 @@ JWT_SECRET=your_jwt_secret
 PAYPAL_CLIENT_ID=your_paypal_client_id
 ```
 
+## 🌱 Seeding the Database
+Before using the app, you can seed the database with sample data (products & users).
+> ⚠️ Warning: Running the seed script will delete existing data before inserting new sample data.
+
+Run the script:
+```sh
+npm run data:import
+```
+To delete all data, use:
+```sh
+npm run data:destroy
+```
+
 ## Running the Application
 ### Development Mode
 #### Backend
