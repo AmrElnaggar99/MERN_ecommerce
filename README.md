@@ -5,6 +5,7 @@
 MONGO_URI=<MONGODB_URI>
 // PORT=<PORT>    use this if you don't want the server to run on 5000 but if you change it you need to also change it in proxy in frontend/package.json
 JWT_SECRET=7245c404fc32dec19586b68c2348c39807035015f7f5366bf98e60fe16601b8c    // or any random string
+PAYPAL_CLIENT_ID=<YOUR_PAYPAL_CLIENT_ID>
 ```
 ## How to run it on local server
 0. cd MERN_ecommerce
@@ -23,6 +24,7 @@ TODO: Documentation
 * MERN
 * Bootstrap
 * JWT
+* PayPal
 
 You can log in with these users:
 
