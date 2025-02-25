@@ -2,6 +2,7 @@
 * You have to be using node < 17; I tested this with node 14.19.3
 * You need to make an .env file in `./` with the following content:
 ```
+NODE_ENV=development
 MONGO_URI=<MONGODB_URI>
 // PORT=<PORT>    use this if you don't want the server to run on 5000 but if you change it you need to also change it in proxy in frontend/package.json
 JWT_SECRET=7245c404fc32dec19586b68c2348c39807035015f7f5366bf98e60fe16601b8c    // or any random string
