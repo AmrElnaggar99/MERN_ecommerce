@@ -10,11 +10,9 @@ PAYPAL_CLIENT_ID=<YOUR_PAYPAL_CLIENT_ID>
 ## How to run it on local server
 0. cd MERN_ecommerce
 1. npm install
+6. node backend/seeder.js
 2. cd frontend
 3. npm install
-4. cd ../backend
-5. npm install
-6. node seeder.js
 7. cd ../
 8. npm run dev
 
