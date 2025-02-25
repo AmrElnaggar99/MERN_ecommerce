@@ -20,6 +20,28 @@ JWT_SECRET=7245c404fc32dec19586b68c2348c39807035015f7f5366bf98e60fe16601b8c    /
 TODO: Implement better UI <br>
 TODO: Documentation
 
-MERN
-Bootstrap
-JWT
+* MERN
+* Bootstrap
+* JWT
+
+You can log in with these users:
+
+```
+const users = [{
+        name: 'AdminUser',
+        email: 'admin@mernshop.com',
+        password: bcrypt.hashSync('123456', 10),
+        isAdmin: true
+    },
+    {
+        name: 'John Due',
+        email: 'john@mernshop.com',
+        password: bcrypt.hashSync('123456', 10),
+    },
+    {
+        name: 'Jane Doe',
+        email: 'jane@mernshop.com',
+        password: bcrypt.hashSync('123456', 10),
+    }
+]
+```
